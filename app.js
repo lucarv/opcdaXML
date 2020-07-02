@@ -4,6 +4,7 @@ const convert = require('xml-js');
 const Transport = require('azure-iot-device-mqtt').Mqtt;
 const Client = require('azure-iot-device').ModuleClient;
 const Message = require('azure-iot-device').Message;
+const http = require('http')
 const server = http.createServer();
 var edge_client;
 var serverport = process.env.SERVER_PORT;

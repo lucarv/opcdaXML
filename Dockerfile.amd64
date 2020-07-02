@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:12-alpine
 
 WORKDIR /app/
 
@@ -6,8 +6,7 @@ COPY package*.json ./
 
 RUN npm install --production
 
-COPY app.js ./
+COPY . ./
 
-USER node
-
+EXPOSE 3333
 CMD ["node", "app.js"]
