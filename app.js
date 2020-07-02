@@ -123,7 +123,7 @@ const pipeMessage = (json_msg) => {
 	edge_client.complete(message, printResultFor('Receiving message'));
 
 	var outputMsg = new Message(message);
-	client.sendOutputEvent('output1', outputMsg, printResultFor('Sending received message'));
+	edge_client.sendOutputEvent('output1', outputMsg, printResultFor('Sending received message'));
 };
 
 // Helper function to print results in the console
